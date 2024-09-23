@@ -9,13 +9,15 @@ public class Main {
             op = Integer.valueOf(JOptionPane.showInputDialog("Qual exercico que ver de 1 até 7? Digite 0 para finalizar"));
             ii = op;
 
-            if (op ==0){
-                System.out.println("Obrigado por usar nosso software");
+            if (op == 0 ){
+                System.out.println("Obrigado por usar nosso software!!!");
 
 
             } else if( op == 1 ){
                 E1parImpar e1 = new E1parImpar();
-                System.out.println(e1.verifica(Integer.valueOf(JOptionPane.showInputDialog("Qual valor quer saber se é par ou impar?")))? "Par": "Impar");
+                boolean isPar = e1.isPar(Integer.valueOf(JOptionPane.showInputDialog("Qual valor quer saber se é par ou impar?")));
+
+                System.out.println(isPar? "Par": "Impar");
 
             } else if ( op == 2 ) {
                 E2Fatorar e2 = new E2Fatorar();

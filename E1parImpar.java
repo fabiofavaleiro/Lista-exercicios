@@ -5,7 +5,7 @@ public class E1parImpar {
 
     public E1parImpar(){    }
 
-    public boolean verifica(int e1){
+    public boolean isPar(int e1){
         int v = e1%2;
 
         if (v == 0){
