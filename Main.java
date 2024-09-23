@@ -2,12 +2,12 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        int op = 1;
+        int op;
 
-        for (int ii = 1;ii != 0; ii ++){
+        do {
 
-            op = Integer.valueOf(JOptionPane.showInputDialog("Qual exercico que ver de 1 até 7? Digite 0 para finalizar"));
-            ii = op;
+            op = Integer.valueOf(JOptionPane.showInputDialog("Qual exercico quer ver de 1 até 7? Digite 0 para finalizar"));
+
 
             if (op == 0 ){
                 System.out.println("Obrigado por usar nosso software!!!");
@@ -74,10 +74,10 @@ public class Main {
 
 
             }
-            ii--;
 
 
-        }
+
+        } while (op != 0);
 
 
 
