@@ -1,26 +1,26 @@
 public class E5Media {
 
     public E5Media(){   }
-    int a,b,c,d,n;
+    private int nota1;
+    private int nota2;
+    private int nota3;
+    private int media;
 
 
-    public int media(int a, int b, int c){
-        this.a = a;
-        this.b = b;
-        this.c = c;
 
-        d = (this.a+this.b+this.b)/3;
-     return d;
-
+    public void recebeNotas(int nota1, int nota2, int nota3){
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
     }
 
-    public boolean apr(int n){
-        this.n = n;
-        if (n>=7){
-            return true;
-        }else {
-            return false;
-        }
+    public int calculaMedia(){
+        media = ( nota1 + nota2 + nota3 )/3;
+        return media;
+    }
+
+    public boolean VerificaAprovado(){
+        return media >= 7;
     }
 
 }

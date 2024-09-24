@@ -39,13 +39,16 @@ public class Main {
 
                 case 5:
                 E5Media media = new E5Media();
-                int a = Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da primeira nota?"));
-                int b = Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da segunda nota?"));
-                int c = Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da terceira nota?"));
-                int d = media.media(a,b,c);
-                boolean ap = media.apr(d);
-                System.out.println("A media é: " + d);
-                System.out.println(" o Aluno está " + (ap? "Apovado!":"Reprovado!"));
+                int nota1 = Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da primeira nota?"));
+                int nota2 = Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da segunda nota?"));
+                int nota3 = Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da terceira nota?"));
+
+                media.recebeNotas(nota1,nota2,nota3);
+                int mediaFinal = media.calculaMedia();
+                boolean aprovado = media.VerificaAprovado();
+                
+                System.out.println("A media do alune é: " + mediaFinal);
+                System.out.println(" o Aluno está " + (aprovado? "Apovado!":"Reprovado!"));
                 break;
 
                 case 6:

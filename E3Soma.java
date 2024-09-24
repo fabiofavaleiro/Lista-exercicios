@@ -1,14 +1,12 @@
 public class E3Soma {
 
-    int n1;
-    int n2;
+
     int s;
     public E3Soma(){    }
 
 
     public int somar(int n1, int n2){
-        this.n1 = n1;
-        this.n2 = n2;
+
 
         if (n1 > n2 ){
 
