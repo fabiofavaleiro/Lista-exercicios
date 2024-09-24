@@ -14,14 +14,12 @@ public class Main {
                 break;
 
                 case 1:
-                E1parImpar e1 = new E1parImpar();
-                boolean isPar = e1.isPar(Integer.valueOf(JOptionPane.showInputDialog("Qual valor quer saber se é par ou impar?")));
+                boolean isPar = E1ParImpar.isPar(Integer.valueOf(JOptionPane.showInputDialog("Qual valor quer saber se é par ou impar?")));
                 System.out.println(isPar? "Par": "Impar");
                 break;
 
                 case 2:
-                E2Fatorar e2 = new E2Fatorar();
-                int v = e2.fatorar(Integer.valueOf(JOptionPane.showInputDialog("Qual numero deseja fatorar")));
+                int v = E2Fatorar.fatorar(Integer.valueOf(JOptionPane.showInputDialog("Qual numero deseja fatorar")));
                 System.out.println(v);
                 break;
 
@@ -69,11 +67,8 @@ public class Main {
                 break;
             }
 
-
-
         } while (op != 0);
 
-
-
     }
-    }
+
+}
