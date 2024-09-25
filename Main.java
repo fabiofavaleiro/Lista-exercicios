@@ -6,7 +6,7 @@ public class Main {
 
         do {
 
-            op = Integer.valueOf(JOptionPane.showInputDialog("Qual exercicio quer ver de 1 até 7? Digite 0 para finalizar"));
+            op = Integer.valueOf(JOptionPane.showInputDialog("Qual exercício quer ver de 1 até 7? Digite 0 para finalizar"));
 
             switch (op){
                 case 0:
