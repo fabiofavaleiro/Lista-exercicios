@@ -5,20 +5,24 @@ public class E6DinPar {
 
     public void E6DinPar(){     }
 
-    int n, p;
+    private int par;
+    private int impar;
 
-    public int varificar(int n){
-        this.n = n;
-        for (int i = 0; i< this.n; i ++){
-            int v = Integer.parseInt(JOptionPane.showInputDialog("Digite o número para ferificar"));
-            if (v%2 ==0){
-                p++;
-            }
+    public void contar(int numero){
 
+        if (numero%2 == 0){
+            par++;
+        }else {
+            impar++;
         }
-        return p;
+
     }
 
+    public int getImpar() {
+        return impar;
+    }
 
-
+    public int getPar() {
+        return par;
+    }
 }

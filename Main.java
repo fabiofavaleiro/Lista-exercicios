@@ -53,9 +53,13 @@ public class Main {
 
                 case 6:
                 E6DinPar verifica = new E6DinPar();
-                int n = Integer.valueOf(JOptionPane.showInputDialog("Quanto numeros quer digitar"));
-                int p= verifica.varificar(n);
-                System.out.println("São " + p + " números pares e " + (n - p) + " números impares");
+                int quantidadeNumeros = Integer.valueOf(JOptionPane.showInputDialog("Quanto numeros quer digitar"));
+
+                for (int i = 0 ; i < quantidadeNumeros; i++){
+                    verifica.contar(Integer.valueOf(JOptionPane.showInputDialog("Digite um número")));
+                }
+
+                System.out.println("São " + verifica.getPar() + " números pares e " + verifica.getImpar() + " números impares");
                 break;
 
                 case 7:
