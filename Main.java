@@ -39,11 +39,14 @@ public class Main {
 
                 case 5:
                 E5Media media = new E5Media();
-                int nota1 = Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da primeira nota?"));
-                int nota2 = Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da segunda nota?"));
-                int nota3 = Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da terceira nota?"));
+                int[] notas = new int[3];
 
-                media.recebeNotas(nota1,nota2,nota3);
+                    for (int i = 0; i < 3; i++) {
+                       notas[i] =  Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da primeira nota?"));
+                    }
+
+
+                media.recebeNotas(notas);
                 int mediaFinal = media.calculaMedia();
                 boolean aprovado = media.VerificaAprovado();
                 
@@ -64,9 +67,10 @@ public class Main {
 
                 case 7:
                 E7Invert inverte = new E7Invert();
-                int vv = Integer.valueOf(JOptionPane.showInputDialog("Digite um numero inteiro com algumas casas decimais"));
-                int rr = inverte.inverter(vv);
-                System.out.println(rr);
+                int valorInicial = Integer.valueOf(JOptionPane.showInputDialog("Digite um numero inteiro com algumas casas decimais"));
+                int resultado = inverte.inverter(valorInicial);
+                System.out.println(resultado);
+                break;
 
                 default:
                 System.out.println("Atenção!!!");

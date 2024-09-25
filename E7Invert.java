@@ -2,24 +2,26 @@ import java.util.ArrayList;
 
 public class E7Invert {
 public void E7Invert(){     }
-int v;
 
-    public int inverter(int v){
-    this.v = v;
-    String va = "" + this.v;
-    String av = "";
 
-    int i = va.length();
+    public int inverter(int valor){
 
-   while ( i > 0 ) {
-        i--;
-        av = (av + va.charAt(i));
+    String valorS = "" + valor;
 
+
+
+    int tamanho = valorS.length();
+    int caracter= 0;
+    int casaDecimal = 1;
+    valor = 0;
+
+   while ( caracter < tamanho ) {
+       valor = valor + ((Integer.parseInt(String.valueOf(valorS.charAt(caracter))))*casaDecimal);
+       casaDecimal = casaDecimal * 10;
+       caracter++;
     }
-    return Integer.valueOf(av);
+
+    return valor;
     }
-
-
-
 
 }

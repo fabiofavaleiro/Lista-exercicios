@@ -1,21 +1,24 @@
+import java.util.ArrayList;
+
 public class E5Media {
 
     public E5Media(){   }
-    private int nota1;
-    private int nota2;
-    private int nota3;
+    private int[] notas = new int[3];
+    private int todasNotasSomadas = 0;
     private int media;
 
 
 
-    public void recebeNotas(int nota1, int nota2, int nota3){
-        this.nota1 = nota1;
-        this.nota2 = nota2;
-        this.nota3 = nota3;
+    public void recebeNotas(int[] notas){
+        this.notas = notas;
     }
 
     public int calculaMedia(){
-        media = ( nota1 + nota2 + nota3 )/3;
+
+        for (int i = 0 ; i < 3 ; i++ ){
+            todasNotasSomadas = todasNotasSomadas + notas[i];
+        }
+        media = todasNotasSomadas/3;
         return media;
     }
 
