@@ -6,7 +6,7 @@ public class Main {
 
         do {
 
-            op = Integer.valueOf(JOptionPane.showInputDialog("Qual exercico quer ver de 1 até 7? Digite 0 para finalizar"));
+            op = Integer.valueOf(JOptionPane.showInputDialog("Qual exercicio quer ver de 1 até 7? Digite 0 para finalizar"));
 
             switch (op){
                 case 0:
@@ -42,7 +42,7 @@ public class Main {
                 int[] notas = new int[3];
 
                     for (int i = 0; i < 3; i++) {
-                       notas[i] =  Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da primeira nota?"));
+                       notas[i] =  Integer.valueOf(JOptionPane.showInputDialog("Qual é valor da nota " + (i+1) +" ?" ));
                     }
 
 
